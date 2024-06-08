@@ -1,0 +1,13 @@
+{
+  "name": "contact-form-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "McCarthy",
+  "license": "MIT",
+  "scripts" : {
+    "sass": "sass ./sass/index.scss ./index.css --watch"
+  },
+  "dependencies": {
+    "sass": "^1.77.4"
+  }
+}

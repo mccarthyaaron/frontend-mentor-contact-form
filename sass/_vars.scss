@@ -1,0 +1,28 @@
+// Breakpoints
+$breakPoint-mobile: 375px;
+$breakPoint-desktop: 1440px;
+
+// Colors
+$light-green: hsl(148, 38%, 91%);
+$darker-green: hsl(169, 82%, 27%);
+$red: hsl(0, 66%, 54%);
+$white: hsl(0, 0%, 100%);
+$medium-grey: hsl(186, 15%, 59%);
+$darker-grey: hsl(187, 24%, 22%);
+
+// Fonts
+$font-size: 16px;
+$light-font: 400;
+$darker-font: 700;
+
+@font-face {
+  font-family: karla;
+  src: url(../assets/fonts/Karla-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: karla-italic;
+  src: url(../assets/fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
+$karla: karla;
+$karla-italic: karla-italic;
