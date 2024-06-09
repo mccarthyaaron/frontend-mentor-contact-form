@@ -61,6 +61,17 @@ body {
     }
 
   }
+
+  
+}
+
+.queries > div {
+  &.selected {
+    background-color: vars.$light-green;
+  }
+  &:active {
+    outline: vars.$light-green solid 3px; 
+  }
 }
 
 textarea {
@@ -88,6 +99,11 @@ textarea {
   border: none;
   padding: 0.5rem 0;
   margin-top: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: vars.$darker-grey;
+  }
 }
 
 @media screen and (min-width: vars.$breakPoint-mobile) {
@@ -99,5 +115,52 @@ textarea {
 
   textarea {
     height: 5rem;
+  }
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: vars.$darker-green
+}
+
+input[type="text"] {
+  &:hover, &:focus {
+    outline: vars.$light-green solid 1.5px;
+  }
+}
+
+input:focus {
+
+}
+
+div#toast {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  background-color: vars.$darker-grey;
+  color: vars.$white;
+  padding: 1rem;
+  border-radius: 5px;
+
+  > div:first-child {
+    display: flex;
+    > img {
+      margin-right: 0.5rem;
+    }
+  }
+  > p {
+    font-size: 0.75rem;
+  }
+}
+
+div#toast.show-toast {
+  display: block;
+}
+
+.error {
+  display: none;
+  color: vars.$red;
+
+  &.show-error-message {
+    display:block
   }
 }

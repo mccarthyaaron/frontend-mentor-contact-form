@@ -15,47 +15,68 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
 
-  <div class="container">
+<body>
+  <div id="toast">
+    <div>
+      <img src="./assets/images/icon-success-check.svg" alt="success-check">
+      <h4>Message Sent!</h4>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <form id="form" class="container">
     <h3 class="heading">Contact Us</h3>
     <div class="names">
-      <div class="input-control">
+      <div class="input-control hovered">
         <label for="firstName" class="label">First Name <span>&#42</span></label>
-        <input id="firstName" type="text" class="input">
+        <input id="firstName" type="text" class="input" name="firstName">
+        <p id="firstName-error" class="error">This field is required</p>
       </div>
       <div class="input-control">
         <label for="lastName" class="label">Last Name <span>&#42</span></label>
-        <input id="lastName" type="text" class="input">
+        <input id="lastName" type="text" class="input" name="lastName">
+        <p id="secondName-error" class="error">This field is required</p>
       </div>
     </div>
     <div class="input-control">
       <label for="email" class="label">Email Address <span>&#42</span></label>
-      <input id="email" type="text" class="input">
+      <input id="email" type="email" class="input" name="email">
+      <p id="email-error" class="error">Please enter a valid email address</p>
     </div>
     <div class="input-control query-container">
       <label class="label">Query Type <span>&#42</span></label>
       <div class="queries">
-        <div class="input">
-          <input id="general" type="radio" name="query">
+        <div id="general-container" class="input">
+          <input id="general" type="radio" name="query" value="general-enquiry">
           <label for="general">General</label>
         </div>
-        <div class="input">
-          <input id="support" type="radio" name="query">
+        <div id="support-container" class="input">
+          <input id="support" type="radio" name="query" value="support-request">
           <label for="support">Support</label>
         </div>
       </div>
+      <p id="radio-error" class="error">Please select a query type
+      </p>
+
     </div>
+
     <div class="input-control">
       <label for="message" class="label">Message <span>&#42</span></label>
-      <textarea id="message"></textarea >
+      <textarea id="message" name="message"></textarea >
+        <p id="message-error" class="error">This field is required</p>
     </div>
-    <div class="agreement">
-      <input id="consent" type="checkbox">
-      <label for="consent" class="label">I consent to being contacted by the team<span>&#42</span></label>
+    <div>
+      <div class="agreement">
+        <input id="consent" type="checkbox" name="consent">
+        <label for="consent" class="label">I consent to being contacted by the team<span>&#42</span></label>
+      </div>
+      <p id="consent-error" class="error">To submit this form, please consent to being contacted</p>
     </div>
+
    <button class="submit-btn">Submit</button>
-  </div>
+  </form>
+
+  <script type="module" src="./index.js"></script>
 
   <!-- First Name
   This field is required
